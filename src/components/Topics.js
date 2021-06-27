@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components/macro';
+import { getJavascriptCategoryId } from '../actions/javascript';
 import Toggle from '../components/Toggle';
 import { Header3 } from '../styles/styles';
 
@@ -9,30 +10,42 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
-const Categories = styled.div``;
+const Categories = styled.div`
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+  padding: 0.5rem 0;
+`;
 
 const Topic = ({ topics, categories }) => {
-  const categoryClick = (e, id) => {
+  const dispatch = useDispatch();
+
+  const categoryClick = (e, categoryId, category) => {
     e.stopPropagation();
-    console.log(id);
+    const getCategory = {
+      categoryId,
+      category,
+    };
+    dispatch(getJavascriptCategoryId(getCategory));
   };
   return (
     <>
       {topics.map((topic) => (
         <Container key={topic._id}>
           <Toggle title={topic.name}>
-            <Categories>
-              {categories
-                .filter((category) => category.topicId === topic._id)
-                .map((category) => (
+            {categories
+              .filter((category) => category.topicId === topic._id)
+              .map((category) => (
+                <Categories key={category._id}>
                   <Header3
-                    key={category._id}
-                    onClick={(e) => categoryClick(e, category._id)}
+                    onClick={(e) =>
+                      categoryClick(e, category._id, category.name)
+                    }
                   >
                     {category.name}
                   </Header3>
-                ))}
-            </Categories>
+                </Categories>
+              ))}
           </Toggle>
         </Container>
       ))}

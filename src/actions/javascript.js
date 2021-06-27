@@ -1,8 +1,8 @@
-import { GET_JAVASCRIPT_CATEGORY_ID } from '../constants/javascript';
+import { GET_JAVASCRIPT_CATEGORY } from '../constants/javascript';
 
-export const getJavascriptCategoryId = (id) => (dispatch) => {
+export const getJavascriptCategoryId = (category) => (dispatch) => {
   dispatch({
-    type: GET_JAVASCRIPT_CATEGORY_ID,
-    payload: id,
+    type: GET_JAVASCRIPT_CATEGORY,
+    payload: category,
   });
 };

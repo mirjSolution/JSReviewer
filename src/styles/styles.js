@@ -27,7 +27,7 @@ export const Header1 = styled.h1`
 `;
 
 export const Header2 = styled.h2`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
 `;
 

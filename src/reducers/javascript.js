@@ -1,15 +1,18 @@
-import { GET_JAVASCRIPT_CATEGORY_ID } from '../constants/javascript';
+import { GET_JAVASCRIPT_CATEGORY } from '../constants/javascript';
 
-export const getJavascriptCategoryId = (
+export const getJavascriptCategory = (
   state = {
-    javascriptCategoryId: '',
+    category: {
+      categoryId: 0,
+      category: '',
+    },
   },
   action
 ) => {
   switch (action.type) {
-    case GET_JAVASCRIPT_CATEGORY_ID:
+    case GET_JAVASCRIPT_CATEGORY:
       return {
-        javascriptCategoryId: action.payload,
+        category: action.payload,
       };
     default:
       return state;
