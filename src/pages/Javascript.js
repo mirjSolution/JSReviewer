@@ -1,10 +1,6 @@
 import styled from 'styled-components/macro';
 import { Header1, ContainerSpaceBetween } from '../styles/styles';
-import {
-  javascriptTopic,
-  javscriptCategory,
-  javascriptQA,
-} from '../data/javascript';
+import { javascriptTopic, javscriptCategory } from '../data/javascript';
 
 import Aside from '../components/Aside';
 
@@ -23,11 +19,7 @@ const Javascript = () => {
         >
           Javascript
         </Header1>
-        <Aside
-          topics={javascriptTopic}
-          categories={javscriptCategory}
-          qas={javascriptQA}
-        />
+        <Aside topics={javascriptTopic} categories={javscriptCategory} />
       </ContainerSpaceBetween>
     </Section>
   );

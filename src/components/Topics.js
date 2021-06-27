@@ -12,6 +12,10 @@ const Container = styled.div`
 const Categories = styled.div``;
 
 const Topic = ({ topics, categories }) => {
+  const categoryClick = (e, id) => {
+    e.stopPropagation();
+    console.log(id);
+  };
   return (
     <>
       {topics.map((topic) => (
@@ -21,7 +25,12 @@ const Topic = ({ topics, categories }) => {
               {categories
                 .filter((category) => category.topicId === topic._id)
                 .map((category) => (
-                  <Header3 key={category._id}>{category.name}</Header3>
+                  <Header3
+                    key={category._id}
+                    onClick={(e) => categoryClick(e, category._id)}
+                  >
+                    {category.name}
+                  </Header3>
                 ))}
             </Categories>
           </Toggle>
