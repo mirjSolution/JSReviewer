@@ -17,7 +17,6 @@ export const ContainerCenterRow = styled.div`
 
 export const ContainerSpaceBetween = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
 `;
 

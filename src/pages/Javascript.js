@@ -66,7 +66,8 @@ const Javascript = () => {
               </AnswersContainer>
             </QAContainer>
           ))}
-          {codes > 0 && <Header1>Sample Codes</Header1>}
+
+          {codes.length > 0 && <Header1>Sample Codes</Header1>}
           {codes.map((codes) => (
             <iframe
               title={category._id}
@@ -74,14 +75,13 @@ const Javascript = () => {
               style={codes.iFrame.style}
               key={codes._id}
               sandbox='allow-scripts allow-same-origin'
-            >
-              {codes._id}
-            </iframe>
+            ></iframe>
           ))}
         </Container>
         <Aside
           css={`
-            align-self: flex-start;
+            position: absolute;
+            top: 0;
           `}
           topics={javascriptTopic}
           categories={javscriptCategory}
