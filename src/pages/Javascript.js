@@ -15,7 +15,9 @@ const Section = styled.div`
   padding: 2rem 9rem;
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding-right: 1rem;
+`;
 const QAContainer = styled.div``;
 
 const QuestionsContainer = styled.div`
@@ -61,6 +63,17 @@ const Javascript = () => {
                   {`Q${idx + 1}).`} {qa.question}
                 </Header2>
               </QuestionsContainer>
+              {qa.iFrame && (
+                <div style={{ textAlign: 'center' }}>
+                  <iframe
+                    title={qa._id}
+                    src={qa.iFrame}
+                    style={qa.style}
+                    sandbox='allow-scripts allow-same-origin'
+                  ></iframe>
+                </div>
+              )}
+
               <AnswersContainer>
                 <Header3>{`${qa.answer}`}</Header3>
               </AnswersContainer>
