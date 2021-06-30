@@ -79,17 +79,18 @@ const Javascript = () => {
               </AnswersContainer>
             </QAContainer>
           ))}
-
-          {codes.length > 0 && <Header1>Sample Codes</Header1>}
-          {codes.map((codes) => (
-            <iframe
-              title={category._id}
-              src={codes.iFrame.source}
-              style={codes.iFrame.style}
-              key={codes._id}
-              sandbox='allow-scripts allow-same-origin'
-            ></iframe>
-          ))}
+          <div style={{ textAlign: 'center' }}>
+            {codes.length > 0 && <Header1>Sample Codes</Header1>}
+            {codes.map((codes) => (
+              <iframe
+                title={category._id}
+                src={codes.iFrame.source}
+                style={codes.iFrame.style}
+                key={codes._id}
+                sandbox='allow-scripts allow-same-origin'
+              ></iframe>
+            ))}
+          </div>
         </Container>
         <Aside
           css={`

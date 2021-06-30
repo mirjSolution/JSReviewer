@@ -62,6 +62,21 @@ export const javscriptCategory = [
     topicId: 1,
     name: 'Rest Parameter and Spread Operator',
   },
+  {
+    _id: 5,
+    topicId: 1,
+    name: 'Positive and Negative Infinity',
+  },
+  {
+    _id: 6,
+    topicId: 1,
+    name: 'NaN (Not a number)',
+  },
+  {
+    _id: 7,
+    topicId: 1,
+    name: 'Arrow Function',
+  },
 ];
 
 export const javascriptQA = [
@@ -172,10 +187,10 @@ export const javascriptQA = [
     categoryId: 4,
     question: `How can you handle the 'n' number of parameters passed to a function ? or create a function which can take any number of parameters and returns sum or max or any other such calculative values.`,
     iFrame:
-      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=let%2520arr%2520%253D%2520%255B1%252C%25205%252C%252089%252C%25205%252C%2520900%252C%2520234%252C%25201456%255D%253B%250A%250Afunction%2520getMaxValue%28arr%29%2520%257B%250A%2520%2520return%2520Math.max%28...arr%29%253B%250A%257D%250A%250Afunction%2520getSumOfArray%28arr%29%2520%257B%250A%2520%2520return%2520arr.reduce%28%28a%252C%2520b%29%2520%253D%253E%2520a%2520%252B%2520b%252C%25200%29%253B%250A%257D%250A%250Aconst%2520maxValue%2520%253D%2520getMaxValue%28arr%29%253B%250Aconsole.log%28maxValue%29%253B%250A%250Aconst%2520sumOfArray%2520%253D%2520getSumOfArray%28arr%29%253B%250Aconsole.log%28sumOfArray%29%253B%250A%250A%252F%252F%25201456%250A%252F%252F%25202690',
+      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=let%2520arr%2520%253D%2520%255B1%252C%25205%252C%252089%252C%25205%252C%2520900%252C%2520234%252C%25201456%255D%253B%250A%250Afunction%2520getMaxValue%28arr%29%2520%257B%250A%2520%2520return%2520Math.max%28...arr%29%253B%250A%257D%250A%250Aconst%2520maxValue%2520%253D%2520getMaxValue%28arr%29%253B%250Aconsole.log%28maxValue%29%253B%250A%250A%252F%252F%25201456%250A%250Afunction%2520getSum%28...num%29%2520%257B%250A%2520%2520return%2520num.reduce%28%250A%2520%2520%2520%2520%28accumulator%252C%2520currentValue%29%2520%253D%253E%2520%28accumulator%2520%252B%253D%2520currentValue%29%252C%250A%2520%2520%2520%25200%250A%2520%2520%29%253B%250A%257D%250A%250Aconst%2520sum%2520%253D%2520getSum%281%252C%25205%252C%252089%252C%25205%252C%2520900%252C%2520234%252C%25201456%29%253B%250Aconsole.log%28sum%29%253B%250A%250A%252F%252F%25202690%250A',
     style: {
-      width: '426px',
-      height: '454px',
+      width: '636px',
+      height: '544px',
       border: '0',
       transform: 'scale(1)',
       overflow: 'none',
@@ -197,6 +212,125 @@ export const javascriptQA = [
       overflow: 'none',
     },
     answer: `No it cannot be placed anywhere it should be always placed at the end of the parameter list. The code is invalid and will return a SyntaxError`,
+  },
+  {
+    _id: 18,
+    categoryId: 5,
+    question: 'What is Infinity?',
+    answer: `Infinity is a special integer value which is greater than any value or in other words it is the highest possible value available in javascript
+    2 possibilities for infinity (1. Positive Infinity (POSITIVE_INFINITY) 2. Negative Infinity(NEGATIVE_INFINITY))
+    In javascript numbers are stored in 64-bit format. It means any value which cannot fit in the 64-bit format. Will return infinity, it cannot hold a value larger than 64 bit.`,
+  },
+  {
+    _id: 19,
+    categoryId: 5,
+    question:
+      'How will you put a validation for positive or negative Infinity?',
+    iFrame:
+      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=if%28num%2520%253D%253D%253D%2520Number.NEGATIVE_INFINITY%29%2520%257B%250A%2520%2520%2520%2520return%2520%27Negative%2520infinite%2520value%27%250A%257D%2520else%2520%257B%250A%2520%2520%2520%2520return%2520num%253B%2520%252F%252F%2520or%2520some%2520calculation%250A%257D%250A%250Aif%28num%2520%253D%253D%253D%2520Number.POSTIVE_INFINITY%29%2520%257B%250A%2520%2520%2520%2520return%2520%27Infinite%2520value%27%250A%257D%2520else%2520%257B%250A%2520%2520%2520%2520return%2520num%253B%2520%252F%252F%2520or%2520some%2520calculation%250A%257D',
+    style: {
+      width: '408px',
+      height: '350px',
+      border: '0',
+      transform: 'scale(1)',
+      overflow: 'none',
+    },
+    answer: ``,
+  },
+  {
+    _id: 20,
+    categoryId: 5,
+    question: 'What will be the output of this code? console.log(1/0)',
+    iFrame:
+      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=console.log%281%252F0%29%253B%250A%250A%252F%252Finfinity',
+    style: {
+      width: '232px',
+      height: '184px',
+      border: '0',
+      transform: 'scale(1)',
+      overflow: 'none',
+    },
+    answer: ``,
+  },
+  {
+    _id: 21,
+    categoryId: 6,
+    question: 'What is NaN?',
+    answer: `Is a global property representing 'Not a number'. You normally get this error when there is a non numeric value or operation performed.`,
+  },
+  {
+    _id: 22,
+    categoryId: 6,
+    question: 'What will be the output of the below statement?',
+    iFrame:
+      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=console.log%28NaN%2520%253D%253D%2520NaN%29%253B%250Aconsole.log%28NaN%2520%253D%253D%253D%2520NaN%29%253B%250A%250A%252F%252F%2520false%250A%252F%252F%2520false',
+    style: {
+      width: '299px',
+      height: '220px',
+      border: '0',
+      transform: 'scale(1)',
+      overflow: 'none',
+    },
+    answer: `It will return false all the time even with strict equality or non-strict equality. Because NaN always have unique values for each NaN so it will not match.`,
+  },
+  {
+    _id: 23,
+    categoryId: 6,
+    question: 'What is the difference between isNaN() and isFinite() method?',
+    answer: `isNaN() is a global function which returns true or false depending on the function while
+    isFinite() is a global function checks for NaN, Infinity and -Infinity as well. It checks whether the value is regular number or not.`,
+  },
+  {
+    _id: 24,
+    categoryId: 7,
+    question: 'What are the behaviour of arrow function?',
+    answer: `The 'this' object does not work with arrow function, 'arguments' object does not work with arrow function, and you cannot use 'new' to call arrow function`,
+  },
+  {
+    _id: 25,
+    categoryId: 7,
+    question: 'Explain the syntactical features of arrow function.',
+    answer: `It is less verbose easy to use if you only have a return statement you can just do it only on one line of code and you can remove the parentheses if you only have one paremeter.`,
+  },
+  {
+    _id: 26,
+    categoryId: 7,
+    question: `Why 'this' does not work in arrow function?`,
+    answer: `because in ES6 we have class keyword to deal with the classes so we do not need a function to act as a class.`,
+  },
+  {
+    _id: 27,
+    categoryId: 7,
+    iFrame:
+      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=const%2520obj%253D%257B%250A%2520%2520method%253A%28%29%253D%253E%2520%250A%2520%2520%257B%250A%2520%2520%2520%2520console.log%28this%29%253B%250A%2520%2520%257D%250A%257D',
+    style: {
+      width: '274px',
+      height: '238px',
+      border: '0',
+      transform: 'scale(1)',
+      overflow: 'none',
+    },
+    question: `Explain output of following code with reason`,
+    answer: `Normally if you use the traditional function it will refer to current context obj but if you use the arrow function the console.log 'this' will refer to window object.`,
+  },
+  {
+    _id: 28,
+    categoryId: 7,
+    question: `How can you handle arguments object like functionality in arrow function?`,
+    answer: `You can use the rest parameter to deal all the parameters pass to the function`,
+  },
+  {
+    _id: 28,
+    categoryId: 7,
+    question: `How can you handle arguments object like functionality in arrow function?`,
+    answer: `You can use the rest parameter to deal all the parameters pass to the function`,
+  },
+  {
+    _id: 29,
+    categoryId: 7,
+    question: `Can you write IIFE with arrow function syntax?`,
+    answer: `A.5) Yes
+    `,
   },
 ];
 
@@ -378,6 +512,21 @@ export const javascriptCodes = [
       style: {
         width: '274px',
         height: '310px',
+        border: '0',
+        transform: 'scale(1)',
+        overflow: 'none',
+      },
+    },
+  },
+  {
+    _id: 13,
+    categoryId: 7,
+    iFrame: {
+      source:
+        'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%252F%252F%2520Traditional%250Afunction%2520test%28%29%2520%257B%257D%250Atest%28%29%253B%250A%250A%252F%252F%2520Function%2520expression%250Aconst%2520test1%2520%253D%2520function%2520%28%29%2520%257B%257D%253B%250A%250A%252F%252F%2520Arrow%2520function%250Aconst%2520test2%2520%253D%2520%28%29%2520%253D%253E%2520%257B%257D%253B%250Aconst%2520sum%2520%253D%2520%28a%29%2520%253D%253E%2520%257B%250A%2520%2520return%2520a%2520%252B%2520b%253B%250A%257D%253B%250Aconst%2520sum1%2520%253D%2520%28a%252C%2520b%29%2520%253D%253E%2520a%2520%252B%2520b%253B%250A%250A%252F%252F%2520IIFE%2520immediately%2520invoke%2520function%2520expression%250A%28function%2520%28%29%2520%257B%250A%2520%2520console.log%28%27IIFE%27%29%253B%250A%257D%29%28%29%253B%250A%250A%252F%252F%2520IIFE%2520immediately%2520invoke%2520arrow%2520expression%250A%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520console.log%28%27IIAF%27%29%253B%250A%257D%29%28%29%253B%250A',
+      style: {
+        width: '476px',
+        height: '562px',
         border: '0',
         transform: 'scale(1)',
         overflow: 'none',
