@@ -77,6 +77,11 @@ export const javscriptCategory = [
     topicId: 1,
     name: 'Arrow Function',
   },
+  {
+    _id: 8,
+    topicId: 1,
+    name: 'Closure',
+  },
 ];
 
 export const javascriptQA = [
@@ -201,7 +206,7 @@ export const javascriptQA = [
     _id: 17,
     categoryId: 4,
     question:
-      'Can the rest operator be placed anywhere in the function parameter list? Or Is this piece of code valid? Give the reason.',
+      'Can the rest operator be placed anywhere in the function parameter list? Or Is this piece of code valid?',
     iFrame:
       'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=function%2520test%28...a%252Cb%29%257B%250A%2520%2520%2520%252F%252Fstatements%250A%257D%250A%250A%252F%252F%2520SyntaxError%253A%2520Rest%2520parameter%2520must%2520be%2520last%2520formal%2520parameter%250A',
     style: {
@@ -323,8 +328,35 @@ export const javascriptQA = [
     _id: 29,
     categoryId: 7,
     question: `Can you write IIFE with arrow function syntax?`,
-    answer: `A.5) Yes
+    answer: `Yes`,
+  },
+  {
+    _id: 30,
+    categoryId: 8,
+    question: `What is Closure?`,
+    answer: `When a function comes under another function a 'closure' is created, it remember outer variable and also helps to access outer scope members.
     `,
+  },
+  {
+    _id: 31,
+    categoryId: 8,
+    question: `How can you access private variable or function outside the scope ?`,
+    iFrame:
+      'https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&ds=true&dsyoff=0px&dsblur=0px&wc=true&wa=true&pv=28px&ph=25px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=function%2520outer%28%29%2520%257B%250A%2520%2520return%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%27inner%2520called%27%29%253B%250A%2520%2520%257D%253B%250A%257D%250A%250Aconst%2520callInnerScope%2520%253D%2520outer%28%29%253B%250A%250AcallInnerScope%28%29%253B%250A%250A%252F%252Finner%2520Called',
+    style: {
+      width: '358px',
+      height: '328px',
+      border: '0',
+      transform: 'scale(1)',
+      overflow: 'none',
+    },
+    answer: ``,
+  },
+  {
+    _id: 32,
+    categoryId: 8,
+    question: `Explain the advantage of closure ?`,
+    answer: `The main advantage of 'closure' is that any member which is private or certain scope, can be accessed keeping it private so that the variable is away from any accidental change of value. Accessing private members with closure pattern assure better approach of making a variable global`,
   },
 ];
 
