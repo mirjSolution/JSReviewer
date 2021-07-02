@@ -320,12 +320,6 @@ export const javascriptQA = [
     answer: `You can use the rest parameter to deal all the parameters pass to the function`,
   },
   {
-    _id: 28,
-    categoryId: 7,
-    question: `How can you handle arguments object like functionality in arrow function?`,
-    answer: `You can use the rest parameter to deal all the parameters pass to the function`,
-  },
-  {
     _id: 29,
     categoryId: 7,
     question: `Can you write IIFE with arrow function syntax?`,
